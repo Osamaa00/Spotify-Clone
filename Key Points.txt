@@ -1,0 +1,9 @@
+Login component with spotify logo and login button
+Login button as a link which sends you to the spotify login service
+Send user to spotify endpoint for auth
+after auth take out the access token
+useEffect hook in app to listen if user has logged in and is back
+useEffect hook runs on a given condition 
+get the token once back on the homepage and set it to state
+render the other functionality if token is set otherwise login
+
