@@ -8,3 +8,42 @@ get the token once back on the homepage and set it to state
 render the other functionality if token is set otherwise login
 creating an instance of SpotifyWebApi to talk btw our app and spotify
 give the access token to that spotify api instance
+get the user profile
+
+app have a login component and a player component
+player has alot of smaller components like a tree of components
+e.g. sidebar, header etc
+
+user at app component now to access the user at header component 
+we have to pass the user down to the header through app to player to header
+this problem is known as prop drilling
+
+we just need a data bucket and keep our data there
+a tightly coupled code 
+
+data layer is like a blanket which sits on app 
+we can push and fetch data from a layer/to a layer from any level of the app
+
+prepare a data layer
+create a data layer with initial state and a reducer
+in there pass a data layer context dot provider which takes a value of useReducer func
+useReducer takes a reducer and an initial state 
+In the the provider we pass children which is <App /> in indexjs
+The <App /> as children is wrapped inside the Data Layer
+wrap the app in data layer in indexjs
+data layer has two things an initial state and a reducer
+
+create reducer file and create an object with some empty values which is our initial state
+pass that initial state in the data layer in indexjs
+create the reducer which takes a state and an action as params
+action is to manipulate what our state looks like
+
+catch the action 'SET_USER' and update our state
+pass the reducer in data layer 
+
+to access the data layer to be able to get something from it
+or dispatch an action to it export the DataLayerContext which
+is a way to be able to access the data layer
+
+use data layer in appjs and when get the user from spotify 
+dispatch an action to reducer to push the user to the data layer
