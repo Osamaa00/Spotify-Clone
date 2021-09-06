@@ -6,4 +6,5 @@ useEffect hook in app to listen if user has logged in and is back
 useEffect hook runs on a given condition 
 get the token once back on the homepage and set it to state
 render the other functionality if token is set otherwise login
-
+creating an instance of SpotifyWebApi to talk btw our app and spotify
+give the access token to that spotify api instance
