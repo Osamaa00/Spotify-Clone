@@ -64,3 +64,13 @@ component styles file
 
 got the playlists of the user from the spotify 
 and created an action listener for it in the reducer
+show the playlists in the Sidebar component
+
+Styled the footer component
+
+created the Header component to be included in Body component
+style the header
+get the user from data layer in the header
+
+now building and styling the lower part of the
+Body component which is discover weekly and songs

@@ -37,6 +37,11 @@ const reducer = (state, action) => {
         playlists: action.playlists,
       };
 
+    case 'SET_DISCOVER_WEEKLY':
+      return {
+        ...state,
+        discover_weekly: action.discover_weekly,
+      }
     // if nothing happens then just return state
     // means if an action is dispatched which cant be listened
     default:
