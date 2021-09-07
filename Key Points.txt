@@ -47,3 +47,20 @@ is a way to be able to access the data layer
 
 use data layer in appjs and when get the user from spotify 
 dispatch an action to reducer to push the user to the data layer
+
+use the token for development as a default value in data layer
+
+pass the spotify object to Player component
+
+create the sidebar and body component which will be side by side
+use them in the the Player component
+create the footer component and include it
+
+styled the components
+if there's a component inside a component then the styles to the
+child component can be applied to parent component styles
+e.g. <hr /> tag in Sidebar component was given style in SidebarOption
+component styles file
+
+got the playlists of the user from the spotify 
+and created an action listener for it in the reducer
