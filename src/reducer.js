@@ -4,7 +4,7 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
-  token: 'BQBmAVD7fKIIydhicBxAjpGvSKFT8_9arLR9X0TTbSvZkcYE-MWUQQbUHDgBa7H8t8CmMHObT6YpwH8D0NOSL1b9EKBTrjqFk7ogBl63lfyuoxxLK0alBiiYdeyxhNBAc1f2PcbxKMnHMnrnpjAEV7KRoBSjzJFhA_L2aGzL365L7eWC',
+  // token: 'BQBmAVD7fKIIydhicBxAjpGvSKFT8_9arLR9X0TTbSvZkcYE-MWUQQbUHDgBa7H8t8CmMHObT6YpwH8D0NOSL1b9EKBTrjqFk7ogBl63lfyuoxxLK0alBiiYdeyxhNBAc1f2PcbxKMnHMnrnpjAEV7KRoBSjzJFhA_L2aGzL365L7eWC',
 };
 
 // creating the reducer

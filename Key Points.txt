@@ -74,3 +74,7 @@ get the user from data layer in the header
 
 now building and styling the lower part of the
 Body component which is discover weekly and songs
+
+added icons before SongRow component created to show the tracks
+in our playlist
+

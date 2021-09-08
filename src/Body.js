@@ -2,6 +2,11 @@ import React from "react";
 import "./Body.css";
 import { useDataLayerValue } from "./DataLayer";
 import Header from "./Header";
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import SongRow from "./SongRow";
+
 
 function Body({ spotify }) {
 
@@ -12,14 +17,25 @@ function Body({ spotify }) {
       <Header spotify={spotify} />
       <div className="body__info">
         <img
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.scdn.co%2Fimage%2F11258b6c69204820d79575e0587f415735db2350&f=1&nofb=1"
+          src={ discover_weekly?.images[0].url }
           alt=""
         />
         <div className="body__infoText">
           <strong>PLAYLIST</strong>
           <h2>Discover Weekly</h2>
-          <p>description...</p>
+          <p>{ discover_weekly?.description }</p>
         </div>
+      </div>
+      <div className="body__songs">
+        <div className="body__icons">
+          <PlayCircleFilledIcon className="body__shuffle" />
+          <FavoriteIcon fontSize="large" />
+          <MoreHorizIcon />
+        </div>
+        {/* List of songs */}
+        { discover_weekly?.tracks.items.map(item => (
+          <SongRow track={ item.track } />
+        )) }
       </div>
     </div>
   );
