@@ -2,9 +2,10 @@
 export const initialState = {
   user: null,
   playlists: [],
-  playing: false,
   item: null,
-  // token: 'BQBmAVD7fKIIydhicBxAjpGvSKFT8_9arLR9X0TTbSvZkcYE-MWUQQbUHDgBa7H8t8CmMHObT6YpwH8D0NOSL1b9EKBTrjqFk7ogBl63lfyuoxxLK0alBiiYdeyxhNBAc1f2PcbxKMnHMnrnpjAEV7KRoBSjzJFhA_L2aGzL365L7eWC',
+  playing: false,
+  top_artists: null,
+  discover_weekly: null,
 };
 
 // creating the reducer
@@ -42,6 +43,30 @@ const reducer = (state, action) => {
         ...state,
         discover_weekly: action.discover_weekly,
       }
+    
+      case 'SET_PLAYING':
+        return {
+          ...state,
+          playing: action.playing
+        }
+      
+      case 'SET_SPOTIFY':
+        return {
+          ...state,
+          spotify: action.spotify
+        }
+
+      case 'SET_TOP_ARTISTS':
+        return {
+          ...state,
+          top_artists: action.top_artists,
+        }
+
+      case 'SET_ITEM':
+        return {
+          ...state,
+          item: action.item,
+        }
     // if nothing happens then just return state
     // means if an action is dispatched which cant be listened
     default:
